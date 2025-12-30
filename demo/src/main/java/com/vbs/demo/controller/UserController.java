@@ -5,10 +5,9 @@ import com.vbs.demo.dto.LoginDto;
 import com.vbs.demo.dto.UpdateDto;
 import com.vbs.demo.models.History;
 import com.vbs.demo.models.User;
-import com.vbs.demo.repositories.HistroyRepo;
+import com.vbs.demo.repositories.HistoryRepo;
 import com.vbs.demo.repositories.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties;
 import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,7 +20,7 @@ public class UserController {
     @Autowired
     UserRepo userRepo;
     @Autowired
-    HistroyRepo histroyRepo;
+    HistoryRepo histroyRepo;
 
     @PostMapping("/register")
     public String register(@RequestBody User user) {
